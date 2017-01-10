@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define max 300
+#define frost 0
+#define jump 10
+
+//standard to SI chart
+int main (void){
+
+	int fahr;
+	//int celc = ((5.0/9.0)*(fahr-32.0));	
+	//to be rapired in next update
+
+	for (fahr == frost; fahr <= max; fahr +=jump){
+		printf("%4d ||%4.2f\n" , fahr, (5.0/9.0)*(fahr-32.0)); fflush(stdout);
+	}
+}
