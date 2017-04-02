@@ -1,43 +1,29 @@
 /*Hash Function*/
 
-
-
 int  hashFunction(char *s,  int T) {
 
-
-       /* The parameter s represents the symbol to be hashed and  */
- 
-      /* the parameter T represents the size of the hash table.  */
- 
-     /* The function returns the hash value for the symbol s.   */
-
-   
-    /* String s is assumed to be terminated with '\0'.         */
-   
-   /* It is also assumed that T is at least 2. The returned   */
-   
-  /* hash value is an integer in the range 0 to T-1.         */
-
-   
- /* The function computes the hash value using arithmetic   */
-   
-/* based on powers of the BASE value defined below.        */
+/* The parameter s represents symbol in question               */
+/* the parameter T represents sizeof hashtable.                */
+/* The function returns the hash value for the symbol s.       */
+/* assume Striong s termineates with newline character         */
+/* Assume T >= 2; fucntion reaches lower bound otherwise       */ 
+/* hash value equates an integer(n) so 0 =< n =< (T-1)         */
+/* The function computes within defined BASE values,           */
+/* power function nonwithstanding  within c library fxns       */
 
    
 #define  BASE   127
 
    int h = 0;     
 
-/* Will hold the hash value at the end. */
+/* holds final hash value */
    
 int temp;      
 
-/* Temporary.                           */
-
-   
+/* temporary int32                   */
+  
 /* The hash value is computed in the for loop below. */
    
-
 for (;  *s != 0;  s++) {
       
  temp = (BASE * h + *s);
@@ -48,14 +34,9 @@ for (;  *s != 0;  s++) {
   
 }
 
-  
-
- /* The hash value computation is complete. So, */
+ /* hash fxn complete, return value */
    
-
 return h;
-
-
 
 } 
 
