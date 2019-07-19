@@ -1,3 +1,3 @@
 # CShells-CSells
 
-breif .c programs
+brief .c programs
